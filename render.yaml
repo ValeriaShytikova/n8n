@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: n8n
+    env: docker
+    repo: https://github.com/ValeriaShytikova/n8n
+    branch: master
+    dockerfilePath: docker/images/n8n/Dockerfile
+    healthCheckPath: /
+    envVars:
+      - key: N8N_BASIC_AUTH_ACTIVE
+        value: "true"
+      - key: N8N_BASIC_AUTH_USER
+        value: lera
+      - key: N8N_BASIC_AUTH_PASSWORD
+        value: supersecretpassword
